@@ -1,0 +1,241 @@
+
+/* =========================================
+   ESTILOS GENERALES Y CONFIGURACIÓN BASE
+   ========================================= */
+
+/* Hace que al pulsar un enlace interno (como #contacto), la página baje suavemente */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Estilos base que hereda toda la página web */
+body {
+  background-color: #ffffff; /* Fondo blanco principal */
+  color: #334155; /* Color gris oscuro para lectura cómoda */
+  font-family: Arial, Helvetica, sans-serif; /* Tipografía moderna sin remates */
+  line-height: 1.5; /* Altura entre líneas de texto para mejorar la legibilidad */
+  font-size: 16px; /* Tamaño de letra estándar */
+  margin:0; /* Elimina el margen blanco por defecto de los navegadores */
+}
+
+/* =========================================
+   CABECERA Y MENÚ DE NAVEGACIÓN
+   ========================================= */
+
+header {
+  background-color: #1e293b; /* Azul oscuro pizarra */
+  color: white;
+ /* Cuando arriba/abajo son iguales (20px) e izquierda/derecha también (40px), se abrevia así: */
+  padding: 20px 40px;
+  display: flex;  /* Coloca el título y el menú en una distribución flexible (fila por defecto) */
+  align-items: center; /*Centra verticalmente los dos elementos flexibles*/
+  justify-content: space-between; /*Distribuye el espacio disponible entre el título/LOGO y el menú, dejando uno a cada extremo*/
+}
+
+/* Estilo del nombre de la empresa en la cabecera */
+.logo {
+  margin: 0;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+/* Contenedor de los enlaces del menú */
+header nav {
+  display: flex; /* Pone los enlaces en fila */
+  gap: 20px; /* Separa cada enlace 20px sin añadir espacio en los extremos */
+}
+
+/* Enlaces del menú superior */
+header nav a {
+  color: white;
+  text-decoration: none; /* Quita el subrayado azul por defecto de los enlaces */
+}
+
+/* Efecto al pasar el ratón por encima de un enlace del menú */
+header nav a:hover {
+  color: yellow;
+}
+
+/* =========================================
+   BOTÓN PRINCIPAL (LLAMADA A LA ACCIÓN)
+   ========================================= */
+
+.boton {
+  background-color: #f97316; /* Naranja corporativo */
+  display: inline-block; /* Permite aplicar padding y márgenes correctamente a un enlace */
+  padding: 12px 24px;
+  color: white;
+  text-decoration: none;
+  border-radius: 20px; /* Esquinas redondeadas elegidas para el diseño */
+  transition: background-color 0.3s; /* Suaviza el cambio de color durante 0,3 segundos */
+}
+
+/* Color más oscuro al pasar el ratón por encima del botón */
+.boton:hover {
+  background-color: #ea580c;
+}
+
+/* =========================================
+   SECCIÓN PRINCIPAL (HERO SECTION)
+   ========================================= */
+
+#inicio {
+  background-color: #f1f5f9; /* Gris muy suave para destacar la presentación */
+  padding: 80px 40px;
+  text-align: center; /* Centra el título, el párrafo y el botón */
+}
+
+/* Selecciona el título <h1> que está dentro de la sección #inicio */
+#inicio h1 {
+  font-size: 40px;
+  margin-top: 0;
+  margin-bottom: 20px; /* Separa el título del párrafo inferior */
+}
+
+/* Párrafo descriptivo de la presentación */
+#inicio p {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 30px; /* Separa el texto del botón de presupuesto */
+}
+
+/* =========================================
+   SECCIÓN DE SERVICIOS Y TARJETAS
+   ========================================= */
+
+#servicios {
+  padding: 40px;
+}
+
+/* Caja que agrupa las 3 tarjetas en horizontal */
+.contenedor-tarjetas {
+  display: flex;
+  gap: 20px; /* Espacio de separación entre tarjeta y tarjeta */
+}
+
+/* Diseño individual de cada tarjeta (se reutiliza en Servicios y Trabajos) */
+.tarjeta {
+  flex: 1; /* Reparte el ancho disponible a partes iguales entre las tres tarjetas */
+  background-color: #f1f5f9;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 0 rgba(15, 23, 42, 0.08); /* Sombra sutil en la parte inferior */
+}
+
+/* =========================================
+   SECCIÓN DE TRABAJOS REALIZADOS
+   ========================================= */
+
+#trabajos {
+  padding: 40px;
+}
+
+/* Imágenes dentro de las tarjetas de trabajos */
+.tarjeta img {
+  width: 100%; /* Ocupa todo el ancho interior de la tarjeta */
+  height: 200px; /* Altura fija para que todas las fotos queden alineadas */
+  object-fit: cover; /*• ¡Propiedad clave! Al fijar ancho y alto, una foto podría deformarse o estirarse. object-fit: cover recorta suavemente los bordes sobrantes para que la imagen rellene el hueco de 200px manteniendo su proporción natural sin aplastarse.*/
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   SECCIÓN Y FORMULARIO DE CONTACTO
+   ========================================= */
+
+ /* Sección completa de contacto: añade margen interior y fondo gris suave para diferenciarla */  
+#contacto {
+  padding: 40px;
+  background-color: #f1f5f9;
+}
+
+/* Selecciona solo el título <h2> que está dentro de #contacto (sin afectar a los demás <h2>) */
+#contacto h2 {
+  text-align: center; /* Centra el título encima del formulario */
+  margin-bottom: 25px; /* Separa el título del primer campo del formulario */
+}
+
+/* Estructura del formulario */
+form {
+  max-width: 600px; /* Limita el ancho máximo para que no sea gigante en pantallas grandes */
+  margin: 0 auto; /*Centra horizontalmente el formulario en la pantalla.Truco clásico de CSS. Pone 0 de margen arriba y abajo, y auto (automático) a izquierda y derecha. Cuando una caja tiene un ancho definido (como max-width: 600px), margin: 0 auto la centra horizontalmente en la pantalla.*/
+  display: flex;
+  flex-direction: column; /* Coloca las etiquetas y los campos uno debajo de otro */
+  gap: 15px;
+}
+
+
+/* Etiquetas de texto (Nombre, Correo, etc.) */
+label {
+  font-weight: bold;
+}
+
+/* Campos de texto y área de mensaje */
+input,
+textarea {
+  padding: 12px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-family: inherit; /* Obliga a los campos a usar la misma letra (Arial) que el resto de la web */
+  font-size: 16px;
+}
+
+/* Altura mínima mayor solo para el cuadro grande de mensaje */
+textarea {
+  min-height: 120px;
+}
+
+/* Resalta el borde en naranja cuando el usuario hace clic o navega con teclado dentro del campo */
+input:focus,
+textarea:focus {
+  outline: none; /* Quita el borde negro grueso por defecto del navegador */
+  border-color: #f97316;
+}
+
+/* Botón de enviar solicitud del formulario */
+form button {
+  background-color: #f97316;
+  color: #ffffff;
+  padding: 14px;
+  border: none;  /* Quita el borde gris por defecto de los botones HTML */
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer; /* Cambia la flecha del ratón por una manita al pasar por encima */
+  transition: background-color 0.3s;
+}
+
+form button:hover {
+  background-color: #ea580c;
+}
+
+/* =========================================
+   PIE DE PÁGINA (FOOTER)
+   ========================================= */
+
+footer {
+  background-color: #1e293b;
+  color: #ffffff;
+  text-align: center;
+  padding: 25px 20px;
+}
+
+footer p {
+  margin: 0;
+}
+
+/* =========================================
+   DISEÑO RESPONSIVE (MÓVILES Y TABLETS)
+   ========================================= */
+
+/* Estas reglas solo se activan cuando la pantalla mide 768px de ancho o menos */   
+@media (max-width: 768px) {
+  header {
+    flex-direction: column; /* Pone el logo arriba y el menú debajo */
+    gap: 15px;
+  }
+  .contenedor-tarjetas {
+    flex-direction: column; /* Apila las tarjetas una debajo de otra */
+  }
+}
+

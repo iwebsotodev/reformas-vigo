@@ -1,0 +1,156 @@
+<!-- Indica al navegador que este documento usa el estándar moderno HTML5 -->
+<!doctype html>
+<!-- Etiqueta raíz del documento; lang="es" ayuda a buscadores y lectores de pantalla -->
+<html lang="es">
+  <head>
+    <!-- Permite mostrar tildes, eñes (ñ) y símbolos especiales sin errores -->
+    <meta charset="UTF-8" />
+    <!-- Adapta el ancho de la página a pantallas de móviles y tablets (Responsive) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Título que aparece en la pestaña del navegador y en los resultados de Google -->
+    <title>Reformas Vigo | Reformas integrales en Vigo</title>
+
+    <!-- Descripción SEO que resume la página en los buscadores -->
+    <meta
+      name="description"
+      content="Empresa de reformas integrales en Vigo. Reformas de cocinas, baños y viviendas. Solicita tu presupuesto."
+    />
+
+    <!-- Conecta esta página HTML con nuestra hoja de estilos CSS -->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!-- =========================================
+         CABECERA Y MENÚ DE NAVEGACIÓN SUPERIOR
+         ========================================= -->
+    <header>
+      <!-- Nombre o marca de la empresa -->
+      <p class="logo">Reformas Vigo</p>
+
+      <!-- Menú con enlaces internos (#id) que bajan suavemente a cada sección -->
+      <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <!-- =========================================
+         CONTENIDO PRINCIPAL DE LA PÁGINA
+         ========================================= -->
+    <main>
+      <!-- SECCIÓN 1: PRESENTACIÓN PRINCIPAL (HERO) -->
+      <section id="inicio">
+        <!-- Título principal de la web (solo debe haber un <h1> por página) -->
+        <h1>Transformamos tu hogar en Vigo</h1>
+
+        <p>Especialistas en reformas de cocinas, baños y viviendas.</p>
+
+        <!-- Enlace estilizado como botón que lleva directo al formulario -->
+        <a href="#contacto" class="boton"> Solicitar presupuesto </a>
+      </section>
+
+      <!-- SECCIÓN 2: TARJETAS DE SERVICIOS -->
+      <section id="servicios">
+        <h2>Nuestros servicios</h2>
+
+        <!-- Contenedor Flexbox que alinea las tres tarjetas en horizontal -->
+        <div class="contenedor-tarjetas">
+          <article class="tarjeta">
+            <h3>Reformas de cocinas</h3>
+            <p>Diseñamos cocinas modernas y funcionales.</p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Reformas de baños</h3>
+            <p>Renovamos tu baño con soluciones personalizadas.</p>
+          </article>
+
+          <article class="tarjeta">
+            <h3>Reformas integrales</h3>
+            <p>Transformamos completamente tu vivienda.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 3: GALERÍA DE TRABAJOS REALIZADOS -->
+      <section id="trabajos">
+        <h2>Nuestros trabajos</h2>
+
+        <div class="contenedor-tarjetas">
+          <!-- Tarjeta 1: el atributo alt describe la imagen para accesibilidad y SEO -->
+          <article class="tarjeta">
+            <img
+              src="img/cocina.jpg"
+              alt="Reforma integral de cocina moderna en Vigo"
+            />
+            <h3>Reforma de cocina en Vigo</h3>
+            <p>
+              Instalación de mobiliario moderno, encimera e iluminación LED.
+            </p>
+          </article>
+
+          <!-- Tarjeta 2 -->
+          <article class="tarjeta">
+            <img
+              src="img/bano.jpg"
+              alt="Reforma de baño moderno con plato de ducha"
+            />
+            <h3>Renovación de baño completo</h3>
+            <p>
+              Sustitución de bañera por plato de ducha y revestimiento cerámico.
+            </p>
+          </article>
+
+          <!-- Tarjeta 3 -->
+          <article class="tarjeta">
+            <img
+              src="img/salon.jpg"
+              alt="Reforma integral de salón luminoso en vivienda"
+            />
+            <h3>Reforma integral de vivienda</h3>
+            <p>
+              Redistribución de espacios, suelos laminados y pintura completa.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- SECCIÓN 4: FORMULARIO DE CONTACTO -->
+      <section id="contacto">
+        <h2>Solicita tu presupuesto</h2>
+
+        <!-- El atributo id permite a JavaScript controlar este formulario -->
+        <form id="formulario-contacto">
+          <!-- for="nombre" conecta la etiqueta con el input que tiene id="nombre" -->
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" required />
+
+          <label for="email">Correo electrónico</label>
+          <input type="email" id="email" required />
+
+          <label for="mensaje">Cuéntanos tu proyecto</label>
+          <textarea id="mensaje" required></textarea>
+
+          <!-- Botón que dispara el evento "submit" en JavaScript -->
+          <button type="submit">Enviar solicitud</button>
+
+          <!-- Párrafo vacío donde JavaScript escribe el aviso rojo o el saludo verde -->
+          <p id="mensaje-formulario"></p>
+        </form>
+      </section>
+    </main>
+
+    <!-- =========================================
+         PIE DE PÁGINA (FOOTER)
+         ========================================= -->
+    <footer>
+      <p>© 2026 Reformas Vigo | Proyecto de demostración</p>
+    </footer>
+
+    <!-- Conecta nuestro código JavaScript al final del body para que todo el HTML ya exista al cargarse -->
+    <script src="script.js"></script>
+  </body>
+</html>
